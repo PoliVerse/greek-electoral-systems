@@ -8,6 +8,7 @@ The "Greek Electoral Systems" package provides functionalities to compute seat d
 - Compute seat distribution using strengthened proportion.
 - Support for configurable thresholds to determine eligible parties.
 - Handle bonus seats for the first party based on a predefined rule.
+- Thoroughly tested to ensure efficiency.
 
 # Installation
 The package can be installed via npm:
