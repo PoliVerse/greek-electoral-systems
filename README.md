@@ -11,6 +11,7 @@ The "Greek Electoral Systems" package provides functionalities to compute seat d
 
 # Installation
 The package can be installed via npm:
+
 `npm install @poliverse/greek-electoral-systems`
 
 # Usage
