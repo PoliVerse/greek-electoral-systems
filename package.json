@@ -1,6 +1,6 @@
 {
   "name": "@poliverse/greek-electoral-systems",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compute seat distribution using simple and strengthened proportion for Greek electoral systems.",
   "main": "index.js",
   "scripts": {
