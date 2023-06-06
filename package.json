@@ -1,7 +1,7 @@
 {
-  "name": "greek-electoral-systems",
+  "name": "@poliverse/greek-electoral-systems",
   "version": "1.0.0",
-  "description": "",
+  "description": "Compute seat distribution using simple and strengthened proportion for Greek electoral systems.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -10,5 +10,13 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^29.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PoliVerse/greek-electoral-systems.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PoliVerse/greek-electoral-systems/issues"
+  },
+  "homepage": "https://github.com/PoliVerse/greek-electoral-systems#readme"
 }
