@@ -1,5 +1,5 @@
 # Greek Electoral Systems
-https://img.shields.io/badge/license-MIT-blue.svg
+<img src='https://img.shields.io/badge/license-MIT-blue.svg' alt='img' />
 
 The "Greek Electoral Systems" package provides functionalities to compute seat distribution using simple and strengthened proportion for Greek electoral systems. It allows users to calculate the allocation of seats based on party percentages and configurable thresholds.
 
@@ -11,7 +11,7 @@ The "Greek Electoral Systems" package provides functionalities to compute seat d
 
 # Installation
 The package can be installed via npm:
-`npm install greek-electoral-systems`
+`npm install @poliverse/greek-electoral-systems`
 
 # Usage
 ```
