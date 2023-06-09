@@ -8,10 +8,14 @@ const apliAnalogiki = (percentages, threshold) => {
             const eligiblePercentages = percentages.filter(percentage => percentage >= threshold);
             const totalEligiblePercentages = eligiblePercentages.reduce((a, b) => a + b, 0);
 
-            eligiblePercentages.forEach(percentage => {
-                const ratioOfTotal = percentage / totalEligiblePercentages;
-                const seatsForParty = Math.round(ratioOfTotal * seats);
-                seatDistribution.push(seatsForParty);
+            percentages.forEach(percentage => {
+                if(eligiblePercentages.includes(percentage)) {
+                    const ratioOfTotal = percentage / totalEligiblePercentages;
+                    const seatsForParty = Math.round(ratioOfTotal * seats);
+                    seatDistribution.push(seatsForParty);
+                } else {
+                    seatDistribution.push(0);
+                }
             });
 
             const totalSeatsDistributed = seatDistribution.reduce((a, b) => a + b, 0);
@@ -60,10 +64,14 @@ const enisximeniAnalogiki = (percentages, threshold) => {
 
             seats -= getBonus();
 
-            eligiblePercentages.forEach(percentage => {
-                const ratioOfTotal = percentage / totalEligiblePercentages;
-                const seatsForParty = Math.round(ratioOfTotal * seats);
-                seatDistribution.push(seatsForParty);
+            percentages.forEach(percentage => {
+                if(eligiblePercentages.includes(percentage)) {
+                    const ratioOfTotal = percentage / totalEligiblePercentages;
+                    const seatsForParty = Math.round(ratioOfTotal * seats);
+                    seatDistribution.push(seatsForParty);
+                } else {
+                    seatDistribution.push(0);
+                }
             });
 
             seatDistribution[0] += getBonus();
