@@ -25,9 +25,9 @@ const apliAnalogiki = (percentages, threshold) => {
                     remainingDistribution.push(seatsForParty);
                 });
 
-                remainingDistribution.forEach(seats => {
-                    seatDistribution.push(seats);
-                });
+                for(let i=0; i<remainingDistribution.length; i++) {
+                    seatDistribution[i] += remainingDistribution[i];
+                }
             }
 
             return seatDistribution;
