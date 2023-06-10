@@ -60,7 +60,7 @@ const enisximeniAnalogiki = (percentages, threshold) => {
             const getBonus = () => {
                 if(eligiblePercentages[biggestPartyIndex] >= 25) {
                     let bonus = 20;
-                    for(let i=25; i<=40; i+=0.5) {
+                    for(let i=25; i<40; i+=0.5) {
                         bonus += 1;
                     }
                     return bonus;
@@ -79,13 +79,14 @@ const enisximeniAnalogiki = (percentages, threshold) => {
                 }
             });
 
-            while(distributedSeats < seats) {
-                let maxRatioIndex = 0;
-                for(let i=1; i<seatDistribution.length; i++) {
-                    if(percentages[i]/totalEligiblePercentages > percentages[maxRatioIndex]/totalEligiblePercentages) maxRatioIndex = i;
+            const totalSeatsDistributed = seatDistribution.reduce((a, b) => a + b, 0);
+
+            while(totalSeatsDistributed < seats) {
+                for(let i=0; i<seatDistribution.length; i++) {
+                    if(i !== biggestPartyIndex) {
+                        seatDistribution[i]++;
+                    }
                 }
-                seatDistribution[maxRatioIndex]++;
-                distributedSeats++;
             }
 
             seatDistribution[biggestPartyIndex] += getBonus();
