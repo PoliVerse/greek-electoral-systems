@@ -2,6 +2,10 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.1.1] - 2023-06-10
+### Fixed
+- Fixed an error regarding seat bonus in `enisximeniAnalogiki` function.
+
 ## [1.1.0] - 2023-06-09
 ### Fixed
 - Fixed the issue regarding results and threshold incompatibility in `apliAnalogiki` function. (#6)
