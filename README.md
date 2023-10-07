@@ -22,7 +22,7 @@ const { apliAnalogiki, enisximeniAnalogiki } = require('greek-electoral-systems'
 const percentages = [41.83, 38.1, 8.15, 5.04, 3.8];
 const threshold = 3;
 
-const simpleSeatDistribution = apliAnalogikin(percentages, threshold);
+const simpleSeatDistribution = apliAnalogiki(percentages, threshold);
 console.log('Simple Proportion Seat Distribution:', simpleSeatDistribution);
 
 const strengthenedSeatDistribution = enisximeniAnalogiki(percentages, threshold);
