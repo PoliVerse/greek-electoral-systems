@@ -79,12 +79,13 @@ const enisximeniAnalogiki = (percentages, threshold) => {
                 }
             });
 
-            const totalSeatsDistributed = seatDistribution.reduce((a, b) => a + b, 0);
+            let totalSeatsDistributed = seatDistribution.reduce((a, b) => a + b, 0);
 
             while(totalSeatsDistributed < seats) {
-                for(let i=0; i<seatDistribution.length; i++) {
+                for(let i=0; i<seatDistribution.length && totalSeatsDistributed < seats; i++) {
                     if(i !== biggestPartyIndex) {
                         seatDistribution[i]++;
+                        totalSeatsDistributed++;
                     }
                 }
             }
